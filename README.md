@@ -1,34 +1,15 @@
-# home-assistant
-My Home Assistant projects
+# Clock Card (ScottE version)
+Fork of [Clock Card](https://github.com/bouwew/clock-card) with small modifications to use plain Javascript date/time functions.
 
-Just been trying to figure out how to make new cards and get to know the frameworks
+Should really take Locale as an input, but I was lazy.
 
-
-## Clock Card
-![](https://i.imgur.com/L8CFpm6.gif "1")
-
-My first real try at a custom HA Lovelace card. 
-The clock card requires the following to be put into the ui-lovelace.yaml file
+## Usage
+1. Install with [HACS](https://hacs.xyz)
+2. Add a Lovelace Resource
 ```
-resources:
-  - url: /local/clock-card.js
-    type: js
-  - url: https://unpkg.com/moment@2.22.2/min/moment.min.js
-    type: js
+URL: /hacsfiles/scotte-clock-card.js
+type: module
 ```
-
-For localisation, download the localise-file from here: https://github.com/moment/moment/tree/develop/locale
-and put your locale file in /local/locale/nl.js (example, replace ‘nl’ by the letters of your locale).
-And, modify ui-lovelace.yaml to show this:
-```
-resources:
-...
-  - url: /local/locale/nl.js
-    type: js
-```
-Finally, open HA on the page where the clock-card is shown, then clean the cache and hard-reload 2 times. After that the localized time and date are shown.
-
-So far mostly a copy/paste/edit of stuff from 
-https://github.com/home-assistant/home-assistant-polymer/blob/dev/src/cards/ha-weather-card.js
-and
-https://github.com/rdehuyss/homeassistant-lovelace-alarm-clock-card/blob/master/alarm-clock-card.js
+2. Add this to a manual card:
+`type: 'custom:scotte-clock-card'`
+3. Profit!
