@@ -10,12 +10,6 @@ class ClockCard extends Polymer.Element {
           padding: 24px 16px;
           display:flex;
         }
-        .gtlogo{
-	        background-image: url("/local/images/gt-logo.png");
-		    background-size: contain;
-		    background-repeat: no-repeat;
-		    width:92px;
-        }
         .time {
           font-family: var(--paper-font-headline_-_font-family);
           -webkit-font-smoothing: var(--paper-font-headline_-_-webkit-font-smoothing);
@@ -38,7 +32,6 @@ class ClockCard extends Polymer.Element {
       </style>
       <ha-card>
         <div class="content">
-	      <div class="gtlogo"></div>
 	      <div class="clock">
 		    <div class="time" id="time">3:45 PM</div>
 		    <div class="date" id="date">Wednesday, December 3</div>
