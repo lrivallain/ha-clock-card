@@ -7,9 +7,9 @@ Should really take Locale as an input, but I was lazy.
 1. Install with [HACS](https://hacs.xyz)
 2. Add a Lovelace Resource
 ```
-URL: /hacsfiles/scotte-clock-card/scotte-clock-card.js
+URL: /hacsfiles/ha-clock-card/ha-clock-card.js
 type: module
 ```
 2. Add this to a manual card:
-`type: 'custom:scotte-clock-card'`
+`type: 'custom:ha-clock-card'`
 3. Profit!
