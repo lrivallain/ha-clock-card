@@ -67,8 +67,8 @@ class ClockCard extends Polymer.Element {
   _updateTime() {
     var time = new Date();
 
-    this.time.innerHTML = time.toLocaleTimeString('en-US', {hour12: true, hour: 'numeric', minute: 'numeric'});
-    this.date.innerHTML = time.toLocaleDateString('en-US', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
+    this.time.innerHTML = time.toLocaleTimeString('fr-FR', {hour12: false, hour: 'numeric', minute: 'numeric'});
+    this.date.innerHTML = time.toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
   }
 
   // The height of your card. Home Assistant uses this to automatically
@@ -78,4 +78,4 @@ class ClockCard extends Polymer.Element {
   }
 }
 
-customElements.define('scotte-clock-card', ClockCard);
+customElements.define('ha-clock-card', ClockCard);
